@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const connection = require("../libs/connection");
+const mongoose = require('mongoose');
+const connection = require('../libs/connection');
 
 const productSchema = new mongoose.Schema({
   title: {
@@ -16,7 +16,7 @@ const productSchema = new mongoose.Schema({
   },
   category: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Category",
+    ref: 'Category',
     required: true,
   },
   subcategory: {
@@ -26,4 +26,4 @@ const productSchema = new mongoose.Schema({
   images: [String],
 });
 
-module.exports = connection.model("Product", productSchema);
+module.exports = connection.model('Product', productSchema);
